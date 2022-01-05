@@ -22,14 +22,11 @@
     "resources": [
         {
             "name": "[parameters('resourceGroupName')]",
-            "type": "Microsoft.RecoveryServices/vaults",
-            "apiVersion": "2021-03-01",
+            "type": "Microsoft.Resources/resourceGroups",
+            "apiVersion": "2019-10-01",
             "location": "[parameters('location')]",
-            "sku": {
-                "name": "RS0",
-                "tier": "Standard"
-            },
-            "properties": {}
+            "dependsOn": [],
+            "tags": {}
         }
     ],
     "outputs": {}
