@@ -121,8 +121,8 @@
                     "imageReference": {
                         "publisher": "Canonical",
                         "offer": "UbuntuServer",
-                        "sku": "20.04-LTS",
-                        "version": "latest"
+                        "sku": "18.04-LTS",
+                        "version": "18.04.202112020"
                     },
                     "osDisk": {
                         "name": "ubuntuVM1-OSDisk",
