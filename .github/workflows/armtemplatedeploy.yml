@@ -71,7 +71,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       resource_group_name: rg-prod-githubworkflows
-      location: Australia Central
+      location: East US 2
     environment:
       name: production
     
