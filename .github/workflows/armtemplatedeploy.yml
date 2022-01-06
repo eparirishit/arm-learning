@@ -48,9 +48,9 @@ jobs:
           scope: resourcegroup
           resourceGroupName: rg-githubactions
           subscriptionId: 796cd379-039e-4b86-b1b2-130dbcab3b90
-          region: Central India
           template: ./arm-templates/virtualmachine.json
-          parameters:
-            adminPassword="My$ecureP@ssword!"
+          parameters: 
+            adminPassword=${{ secrets.UBUNTU_ADMIN_PASSWORD }}
+            location="Central India"
           deploymentMode: incremental
 
