@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 env:
-  resource_group_name: rg-githubactions
+  resource_group_name: rg-githubworkflows
   location: Central India
   subscriptionId: 796cd379-039e-4b86-b1b2-130dbcab3b90
 

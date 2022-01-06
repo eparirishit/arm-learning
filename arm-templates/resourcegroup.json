@@ -7,14 +7,14 @@
             "metadata": {
                 "description": "Enter the location to deploy the resource to"
             },
-            "defaultValue": "South India"
+            "defaultValue": "Central India"
         },
         "resourceGroupName": {
             "type": "string",
             "metadata": {
                 "description": "Enter the name for resource greoup"
             },
-            "defaultValue": "rg-githubactions"
+            "defaultValue": "rg-githubworkflows"
         }
     },
     "functions": [],
