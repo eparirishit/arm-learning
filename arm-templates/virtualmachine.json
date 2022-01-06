@@ -104,7 +104,7 @@
             },
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_A2_v2"
+                    "vmSize": "Standard_DS1_v2"
                 },
                 "osProfile": {
                     "computerName": "ubuntuVM1",
@@ -115,7 +115,7 @@
                     "imageReference": {
                         "publisher": "Canonical",
                         "offer": "UbuntuServer",
-                        "sku": "16.04-LTS",
+                        "sku": "20.04-LTS",
                         "version": "latest"
                     },
                     "osDisk": {
