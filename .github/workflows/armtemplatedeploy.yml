@@ -35,6 +35,9 @@ jobs:
           subscriptionId: ${{ env.subscriptionId }}
           region: "${{ env.location }}"
           template: ./arm-templates/resourcegroup.json
+          parameters:
+            location="${{ env.location }}"
+            resourceGroupName=${{ env.resource_group_name }}
           deploymentName: ${{ env.resource_group_name }}
 
       - name: Deploy Storage Account
@@ -89,6 +92,9 @@ jobs:
           subscriptionId: ${{ env.subscriptionId }}
           region: "${{ env.location }}"
           template: ./arm-templates/resourcegroup.json
+          parameters:
+            location="${{ env.location }}"
+            resourceGroupName=${{ env.resource_group_name }}
           deploymentName: ${{ env.resource_group_name }}
 
       - name: Deploy Storage Account
@@ -103,6 +109,7 @@ jobs:
           parameters: 
             ./arm-templates/storageaccount.parameters.json
             storageAccountName=armstg002
+            location="${{ env.location }}"
           deploymentMode: incremental
 
       - run: echo ${{ steps.storageAccountDeploy.outputs.BlobUri }}
