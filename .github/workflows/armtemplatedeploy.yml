@@ -9,7 +9,7 @@ on:
 
 env:
   resource_group_name: rg-githubactions
-  location: "Central India"
+  location: Central India
   subscriptionId: 796cd379-039e-4b86-b1b2-130dbcab3b90
 
 jobs:
@@ -29,7 +29,7 @@ jobs:
         with:
           scope: subscription
           subscriptionId: ${{ env.subscriptionId }}
-          region: ${{ env.location }}
+          region: "${{ env.location }}"
           template: ./arm-templates/resourcegroup.json
           deploymentName: ${{ env.resource_group_name }}
 
@@ -40,7 +40,7 @@ jobs:
           scope: resourcegroup
           resourceGroupName: ${{ env.resource_group_name }}
           subscriptionId: ${{ env.subscriptionId }}
-          region: ${{ env.location }}
+          region: "${{ env.location }}"
           template: ./arm-templates/storageaccount.json
           parameters: ./arm-templates/storageaccount.parameters.json
           deploymentMode: incremental
@@ -56,6 +56,6 @@ jobs:
           template: ./arm-templates/virtualmachine.json
           parameters: 
             adminPassword=${{ secrets.UBUNTU_ADMIN_PASSWORD }}
-            location=${{ env.location }}
+            location="${{ env.location }}"
           deploymentMode: incremental
 
